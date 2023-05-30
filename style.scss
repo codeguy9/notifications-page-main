@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+
+* {  
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+
+$myFont: Plus Jakarta Sans;
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+$white: hsl(0, 0%, 100%);
+$very-light-grayish-blue: hsl(210, 60%, 98%);
+$light-grayish-blue-1: hsl(211, 68%, 94%);
+$light-grayish-blue-2: hsl(205, 33%, 90%);
+$grayish-blue: hsl(219, 14%, 63%);
+$dark-grayish-blue: hsl(219, 12%, 42%);
+$very-dark-blue: hsl(224, 21%, 14%);
+$mySize: 16px;
+$my500: 500;
+$my800: 800;
+
+body {
+    font-family: $myFont;
+    font-size: $mySize;
+}
+
+.background {
+    background: $very-light-grayish-blue;
+
+    .container {
+        max-width: 1440px;
+        margin: auto;
+
+        .content {
+            background: $white;
+            border-radius: 15px;
+            padding: 2rem;
+            
+
+            .upper-content {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 4rem;
+
+                .notif span:first-of-type {
+                  font-weight: $my800;
+                  font-size: 2rem;
+                }
+
+                .notif span:last-of-type {
+                  background: $blue;
+                  padding: .4rem .8rem;
+                  color: $white;
+                  margin-left: 1rem;
+                  border-radius: 10px;
+                }
+
+                .read a p {
+                  font-size: 1.2rem;
+                  color: $dark-grayish-blue;
+                }
+
+                .read {
+
+                  button {
+                    background: none;
+                    color: $dark-grayish-blue;
+                    border: none;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                  }
+                }
+            }
+
+            .selected {
+
+              .selected-tab {
+                display: flex;
+                gap: 1rem;
+                background: $very-light-grayish-blue;
+                padding: 1.7rem;
+                border-radius: 10px;
+                margin-bottom: 1rem;
+
+                .inactive {
+                  background: none;
+                }
+                
+                img {
+                  width: 50px;
+                }
+                .selected-text {
+
+                  p {
+                    font-weight: $my500;
+                    color: $dark-grayish-blue;
+                  }
+
+                  p::after {
+                    content: '';
+                    position: absolute;
+                    background: $red;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin-left: 10px;
+                    margin-top: 7px;
+                    
+
+                  }
+
+                  p .tournament {
+                    color: $dark-grayish-blue;
+                    font-weight: $my800;
+                  }
+
+                  p .chess {
+                    font-weight: $my800;
+                    color: $blue;
+                  }
+
+                  .minutes {
+                    color: $grayish-blue;
+                    font-weight: $my500;
+                  }
+                }
+
+              }
+              .deselected {
+                background: none;
+              }
+
+              
+            }
+
+            .unselected-tab {
+              display: flex;
+              gap: 1rem;
+              
+              padding: 1.7rem;
+              border-radius: 10px;
+              margin-bottom: 1rem;
+    
+              img {
+                width: 50px;
+              }
+    
+              .unselected-text {
+    
+                p {
+                  font-weight: $my500;
+                  color: $dark-grayish-blue;
+                }
+
+
+                .minutes-riszky {
+                  color: $grayish-blue;
+                  font-weight: $my500;
+                  }
+    
+                  
+              }
+    
+              
+            }
+
+            
+        }
+        .response {
+
+          p {
+        
+            width: 70%;
+            margin-left: 6rem;
+            border: 1px solid $light-grayish-blue-1;
+            border-radius: 8px;
+            padding: 1rem;
+            line-height: 1.5;
+            font-weight: $my500;
+            color: $dark-grayish-blue;
+          }
+        }
+
+        .unselected {
+          padding-top: 3rem;
+
+
+        }
+
+        
+      }
+}
+
+
+
